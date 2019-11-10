@@ -1,0 +1,112 @@
+html,body {
+  font-family: 'Avenir';
+  color: white;
+  text-shadow: 0 0 30px #fff;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:repeat(4,  1fr);
+  grid-gap:20px;
+  height:90vh;
+}
+.key-pad {
+  background-image: radial-gradient(aqua, aqua 10%, skyblue);
+  border: 2px solid skyblue;
+  border-radius: 12px;
+  height: 100%;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-transform: lowercase;
+  box-shadow: 0 0 20px skyblue;
+  animation:init 1s;
+  cursor:pointer;
+}
+.pad-2{
+  background-image: radial-gradient(orange, orange 10%, red);
+  border: 2px solid red;
+  box-shadow: 0 0 20px red;
+}
+.pad-3{
+  background-image: radial-gradient(lightgreen, lightgreen 10%, green);
+  border: 2px solid green;
+  box-shadow: 0 0 20px green;
+}
+.pad-3{
+  background-image: radial-gradient(lightpink, lightpink 10%, purple);
+  border: 2px solid purple;
+  box-shadow: 0 0 20px purple;
+}
+.pad-4{
+  background-image: radial-gradient(lightblue, lightblue 10%, blue);
+  border: 2px solid blue;
+  box-shadow: 0 0 20px blue;
+}
+.pad-5{
+  background-image: radial-gradient(pink, pink 10%, hotpink);
+  border: 2px solid hotpink;
+  box-shadow: 0 0 20px hotpink;
+}
+.pad-6{
+  background-image: radial-gradient(lightgreen, lightgreen 10%, green);
+  border: 2px solid green;
+  box-shadow: 0 0 20px green;
+}
+.pad-7{
+  background-image: radial-gradient(yellow, yellow 10%, orange);
+  border: 2px solid orange;
+  box-shadow: 0 0 20px orange;
+  color:black;
+}
+.pad-8{
+  background-image: radial-gradient(lightyellow, lightyellow 10%, yellow);
+  border: 2px solid yellow;
+  box-shadow: 0 0 20px yellow;
+  color:black;
+}
+
+.key-pad>h3 {
+  margin: 5px;
+}
+
+.pulso{
+  animation:pulse 1.5s ease infinite;
+}
+
+.push{
+  animation:press .3s;
+}
+
+@keyframes press{
+  0%{transform:scale(1)}
+  50%{
+    transform:scale(.99);
+    box-shadow:inset 0 0 10px #000000;
+  }
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.02)}
+}
+@keyframes fade{
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(3);
+  }
+}
+
+@keyframes init{
+  0%{
+    transform:rotate(0deg) scale(1);
+  }
+  50%{
+    transform:rotate(360deg) scale(1.5);
+  }
+}
